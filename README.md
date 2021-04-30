@@ -25,7 +25,7 @@ Tracks the amount of paid subscribed apps a user has and sends lets the user set
 
 **Required Must-have Stories**
 - [x] User can register a new account 
-- [x] User can login
+- [x] User can login and stay logged in among restarts
 - [ ] User can see a stream of trending apps and can add it to their subscribed list 
 - [ ] User can add a new subscribed app that they want to track 
 - [ ] User can set a budget per month 
