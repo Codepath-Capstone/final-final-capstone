@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Parse
 class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -19,10 +19,14 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func ChangeCurrencyButton(_ sender: Any) {
-        
     }
-    @IBAction func DeleteAcountButton(_ sender: Any) {
+    @IBAction func logoutButton(_ sender: Any) {
+        PFUser.logOut()
+        UserDefaults.standard.set(false, forKey: "userLoggedIn")
+        _ = PFUser.current() // this will now be nil
+        self.dismiss(animated: true, completion: nil)
     }
+    
     /*
     // MARK: - Navigation
 
