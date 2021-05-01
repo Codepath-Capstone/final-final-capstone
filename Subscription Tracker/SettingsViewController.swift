@@ -8,7 +8,9 @@
 import UIKit
 import Parse
 class SettingsViewController: UIViewController {
-
+    
+    @IBOutlet weak var BudgetTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +29,23 @@ class SettingsViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+    @IBAction func onBudgetChange(_ sender: Any) {
+        
+        let budget = PFObject(className: "Budget")
+        
+        budget["amount"] = BudgetTextField.text!
+        budget["author"] = PFUser.current()!
+        
+        budget.saveInBackground { (success, error) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+                print("saved!")
+            } else {
+                print("error!")
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 
