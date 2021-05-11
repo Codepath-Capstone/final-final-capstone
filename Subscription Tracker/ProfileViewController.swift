@@ -38,28 +38,28 @@ class ProfileViewController: UIViewController {
         super.viewDidAppear(animated)
 //
 //
-        let query = PFQuery(className:"Budget")
-       let location = query.includeKey("author")
-        print("location: " , location )
-        query.findObjectsInBackground { (budget, error) in
-            if budget != nil {
-                         print ("printed!")
-                
-                
-                print (budget as Any)
-                     } else {
-                         print ("failed!")
-                     }
-        }
-        
-        query.includeKey("author")
-        query.getObjectInBackground(withId: "NgRi2HaV2v") { (budget, error) in
-            if budget != nil {
-                print ("printed!")
-            } else {
-                print ("failed!")
-            }
-        }
+//        let query = PFQuery(className:"Budget")
+//       let location = query.includeKey("author")
+//        print("location: " , location )
+//        query.findObjectsInBackground { (budget, error) in
+//            if budget != nil {
+//                         print ("printed!")
+//                
+//                
+//                print (budget as Any)
+//                     } else {
+//                         print ("failed!")
+//                     }
+//        }
+//        
+//        query.includeKey("author")
+//        query.getObjectInBackground(withId: "NgRi2HaV2v") { (budget, error) in
+//            if budget != nil {
+//                print ("printed!")
+//            } else {
+//                print ("failed!")
+//            }
+//        }
         
 //        UserNameLabel.text! = budget["author"] as? String
         

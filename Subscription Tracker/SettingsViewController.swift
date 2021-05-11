@@ -32,22 +32,22 @@ class SettingsViewController: UIViewController {
     
     @IBAction func onBudgetChange(_ sender: Any) {
         
-        var user = PFUser.current()
-        
-        let budget = PFObject(className: "Budget")
-        
-        budget["amount"] = BudgetTextField.text!
-        budget["author"] = PFUser.current()!
-        budget["user"] = user
-        
-        budget.saveInBackground { (success, error) in
-                    if success {
-                        self.dismiss(animated: true, completion: nil)
-                        print("saved!")
-                    } else {
-                        print("error!")
-                    }
-                }
+//        var user = PFUser.current()
+//        
+//        let budget = PFObject(className: "Budget")
+//        
+//        budget["amount"] = BudgetTextField.text!
+//        budget["author"] = PFUser.current()!
+//        budget["user"] = user
+//        
+//        budget.saveInBackground { (success, error) in
+//                    if success {
+//                        self.dismiss(animated: true, completion: nil)
+//                        print("saved!")
+//                    } else {
+//                        print("error!")
+//                    }
+//                }
         
 //        let budget = PFObject(className: "Budget")
 //
