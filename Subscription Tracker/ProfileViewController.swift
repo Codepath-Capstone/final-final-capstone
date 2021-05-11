@@ -6,14 +6,26 @@
 //
 
 import UIKit
-
+import Parse
 class ProfileViewController: UIViewController {
-
+    
+   
+   
+    
+    @IBOutlet weak var UserNameLabel: UILabel!
+    
+    @IBOutlet weak var CurrentTotalLabel: UILabel!
+    @IBOutlet weak var BudgetLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+    
         // Do any additional setup after loading the view.
     }
+
+
+    
     class AppCell: UITableViewCell
     {
         @IBOutlet weak var AppNameLabel: UILabel!
@@ -21,12 +33,41 @@ class ProfileViewController: UIViewController {
         
         
     }
-    @IBOutlet weak var UserNameLabel: UILabel!
     
-    @IBOutlet weak var CurrentTotalLabel: UILabel!
-    @IBOutlet weak var BudgetLabel: UILabel!
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//
+//
+        let query = PFQuery(className:"Budget")
+       let location = query.includeKey("author")
+        print("location: " , location )
+        query.findObjectsInBackground { (budget, error) in
+            if budget != nil {
+                         print ("printed!")
+                
+                
+                print (budget as Any)
+                     } else {
+                         print ("failed!")
+                     }
+        }
+        
+        query.includeKey("author")
+        query.getObjectInBackground(withId: "NgRi2HaV2v") { (budget, error) in
+            if budget != nil {
+                print ("printed!")
+            } else {
+                print ("failed!")
+            }
+        }
+        
+//        UserNameLabel.text! = budget["author"] as? String
+        
+        
+    }
+   
     @IBAction func RemoveButton(_ sender: Any) {
+        
     }
     
     

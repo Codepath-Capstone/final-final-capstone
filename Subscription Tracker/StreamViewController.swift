@@ -1,111 +1,99 @@
-//  StreamViewController.swift
-//  Subscription Tracker
+// StreamViewController.swift
+// Subscription Tracker
 //
-//  Created by Brian Calabrese on 4/14/21.
+// Created by Brian Calabrese on 4/14/21.
 //
 import UIKit
 import Foundation
-class StreamViewController: UIViewController {
+class StreamViewController:  UIViewController, UITableViewDataSource,UITableViewDelegate{
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let headers = [
-            "x-rapidapi-key": "aae7237d85msh2d2846fbe299da2p1af038jsn5cdef4e497c6",
-            "x-rapidapi-host": "app-stores.p.rapidapi.com"
-        ]
-        
-        var request = URLRequest(url: URL(string: "https://app-stores.p.rapidapi.com/search?term=facebook&store=google&language=en")! as URL,
-                                                cachePolicy: .useProtocolCachePolicy,
-                                            timeoutInterval: 10.0)
-        request.httpMethod = "GET"
-        request.allHTTPHeaderFields = headers
-        
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-            if (error != nil) {
-                print(error as Any)
-            } else if let data = data {
-               // let httpResponse = response as? HTTPURLResponse
+    @IBOutlet weak var tableView: UITableView!
+    
+    var appData = [[String: Any]]()
+//  var searchText = [String]()
+    
+    
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+      return 50
+    }
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      let cell = UITableViewCell()
+      //cell.AppNameLabel!.text = dataDictionary[indexPath.row]
+      return cell
+  }
+    
+    
 
-                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options:[]) as! Array<Any>
-                
-                // print(httpResponse as Any)
-                
-                //appData = dataDictionary["name"]
-                
-                print(dataDictionary)
-            }
-        })
-        
-        dataTask.resume()
-
-
-
-        // Do any additional setup after loading the view.
-    }
-    class AppCell: UITableViewCell{
-        @IBOutlet weak var AppNameLabel: UILabel!
-    }
-    @IBAction func ProfileButton(_ sender: Any) {
-    }
-    @IBOutlet weak var AppTableView: UITableView!
-    @IBAction func DetailsButton(_ sender: Any) {
-    }
-    @IBAction func AddButton(_ sender: Any) {
-    }
-    /*
-    // MARK: - Navigation
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
+  class AppCell: UITableViewCell{
+    
+    
+    
+    @IBOutlet weak var ImageView: UIImageView!
+    @IBOutlet weak var AppNameLabel: UILabel!
+    
+    
+    
+  }
+  @IBAction func ProfileButton(_ sender: Any) {
+  }
+  @IBOutlet weak var AppTableView: UITableView!
+    
+  @IBAction func DetailsButton(_ sender: Any) {
+  }
+  @IBAction func AddButton(_ sender: Any) {
+  }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    tableView.dataSource = self
+    tableView.delegate = self
+    
+    // Do any additional setup after loading the view.
+//    let headers = [
+//      "x-rapidapi-key": "aae7237d85msh2d2846fbe299da2p1af038jsn5cdef4e497c6",
+//      "x-rapidapi-host": "app-stores.p.rapidapi.com"
+//    ]
+//    var request = URLRequest(url: URL(string: "https://app-stores.p.rapidapi.com/search?term=facebook&store=google&language=en")! as URL,
+//                        cachePolicy: .useProtocolCachePolicy,
+//                      timeoutInterval: 10.0)
+//    request.httpMethod = "GET"
+//    request.allHTTPHeaderFields = headers
+//    let session = URLSession.shared
+//    let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+//        if let error = error {
+//            print (error.localizedDescription)
+//
+//      } else if let data = data {
+//        // let httpResponse = response as? HTTPURLResponse
+//        let dataDictionary = try! JSONSerialization.jsonObject(with: data, options:[]) as! [String: Any]
+//        // print(httpResponse as Any)
+//        //appData = dataDictionary["name"]
+//        self.appData = dataDictionary["0"] as! [[String : Any]]
+//
+//        print(self.appData);
+        //print(self.appData)
+//        let appName = self.appData.filter { (key, value) in
+//          key.contains("name")}
+//        let appDescription = self.appData.filter { (key, value) in
+//          key.contains("description")}
+//        let appImg = self.appData.filter { (key, value) in
+//          key.contains("icons")}
+//        print(dataDictionary)
+//        print(appName.values)
+//        print(appDescription.values)
+//        print(appImg.values)
+//      }
+//    })
+  /*
+  // MARK: - Navigation
+  // In a storyboard-based application, you will often want to do a little preparation before navigation
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    // Get the new view controller using segue.destination.
+    // Pass the selected object to the new view controller.
+  }
+  */
+//    dataTask.resume()
+  }
 }
-
-
-//CODE SNIPPET FROM RAPID API //
-//
-//let headers = [
-//    "x-rapidapi-key": "ce9c2e6f61msh86dde2074749d31p16f6d3jsn7c7b87753b55",
-//    "x-rapidapi-host": "app-stores.p.rapidapi.com"
-//]
-//
-//let request = NSMutableURLRequest(url: NSURL(string: "https://app-stores.p.rapidapi.com/search?term=sleep&store=google&language=en")! as URL,
-//                                        cachePolicy: .useProtocolCachePolicy,
-//                                    timeoutInterval: 10.0)
-//request.httpMethod = "GET"
-//request.allHTTPHeaderFields = headers
-//
-//let session = URLSession.shared
-//let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-//    if (error != nil) {
-//        print(error)
-//    } else {
-
-//        let httpResponse = response as? HTTPURLResponse
-//        print(httpResponse)
-//    }
-//})
-//
-//dataTask.resume()
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-//CODE SNIPPET FROM CODEPATH //
-//let url = URL(string: "https://app-stores.p.rapidapi.com/search?term=sleep&store=google&language=en")!
-//let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
-//let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
-//let task = session.dataTask(with: request) { (data, response, error) in
-//     // This will run when the network request returns
-//     if let error = error {
-//            print(error.localizedDescription)
-//     } else if let data = data {
-//            let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-//
-
-//
-//     }
-//}
-//task.resume()

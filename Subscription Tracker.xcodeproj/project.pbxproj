@@ -20,6 +20,8 @@
 		C036E44B26271DC20093034D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C036E44A26271DC20093034D /* SignUpViewController.swift */; };
 		C036E450262729FD0093034D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C036E44F262729FD0093034D /* ProfileViewController.swift */; };
 		C036E45526273F120093034D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C036E45426273F120093034D /* DetailsViewController.swift */; };
+		D91C894D264ACECA00514E1D /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91C894C264ACECA00514E1D /* MoviesViewController.swift */; };
+		D91C895A264AD85500514E1D /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91C8959264AD85400514E1D /* AppCell.swift */; };
 		D9ED4055263C35470056ECD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9ED4053263C35470056ECD3 /* Main.storyboard */; };
 		D9ED405E263C366E0056ECD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9ED405C263C366E0056ECD3 /* LaunchScreen.storyboard */; };
 		EFA193705302A64D6943386E /* Pods_Subscription_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2284C71A604D0B7A5AE2DBC /* Pods_Subscription_Tracker.framework */; };
@@ -69,6 +71,8 @@
 		C2797548930FBAEEF37B8E45 /* Pods_Subscription_TrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Subscription_TrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB14C9E72842D2AB6615D424 /* Pods-Subscription Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subscription Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Subscription Tracker/Pods-Subscription Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		D2284C71A604D0B7A5AE2DBC /* Pods_Subscription_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Subscription_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D91C894C264ACECA00514E1D /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		D91C8959264AD85400514E1D /* AppCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCell.swift; sourceTree = "<group>"; };
 		D9ED4054263C35470056ECD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/capstone-main/Subscription Tracker/Subscription Tracker/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		D9ED405D263C366E0056ECD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/capstone-main/Subscription Tracker/Subscription Tracker/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +155,8 @@
 				C036E44F262729FD0093034D /* ProfileViewController.swift */,
 				C036E45426273F120093034D /* DetailsViewController.swift */,
 				C025081B2629D0EC000EA036 /* SettingsViewController.swift */,
+				D91C894C264ACECA00514E1D /* MoviesViewController.swift */,
+				D91C8959264AD85400514E1D /* AppCell.swift */,
 			);
 			path = "Subscription Tracker";
 			sourceTree = "<group>";
@@ -421,12 +427,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D91C894D264ACECA00514E1D /* MoviesViewController.swift in Sources */,
 				C036E450262729FD0093034D /* ProfileViewController.swift in Sources */,
 				C036E44626271A390093034D /* StreamViewController.swift in Sources */,
 				C036E43E262719F50093034D /* LoginViewController.swift in Sources */,
 				C036E40B262708B60093034D /* AppDelegate.swift in Sources */,
 				C036E45526273F120093034D /* DetailsViewController.swift in Sources */,
 				C036E40D262708B60093034D /* SceneDelegate.swift in Sources */,
+				D91C895A264AD85500514E1D /* AppCell.swift in Sources */,
 				C036E44B26271DC20093034D /* SignUpViewController.swift in Sources */,
 				C025081C2629D0EC000EA036 /* SettingsViewController.swift in Sources */,
 			);
