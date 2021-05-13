@@ -47,8 +47,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                 
             self.apps = dataDictionary as! [[String:Any]]
             self.tableView.reloadData()
-            
-            print(self.apps)
+//            print ( "hello" )
+//            let test = dataDictionary as! [String:Any]
+//            print(test)
             
 //            print(appName.values)
 //            print(appDescription.values)
@@ -58,6 +59,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         dataTask.resume()
         // Do any additional setup after loading the view.
     }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return apps.count
@@ -82,8 +84,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
       
         return cell
     }
-    
-
     
     // MARK: - Navigation
 

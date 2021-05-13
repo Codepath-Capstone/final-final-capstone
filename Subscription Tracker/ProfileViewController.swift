@@ -9,7 +9,7 @@ import UIKit
 import Parse
 class ProfileViewController: UIViewController {
     
-   
+   var budgets = [PFObject]()
    
     
     @IBOutlet weak var UserNameLabel: UILabel!
@@ -37,21 +37,32 @@ class ProfileViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 //
-//
-//        let query = PFQuery(className:"Budget")
-//       let location = query.includeKey("author")
-//        print("location: " , location )
-//        query.findObjectsInBackground { (budget, error) in
-//            if budget != nil {
-//                         print ("printed!")
-//                
-//                
+        
+    
+
+        let query = PFQuery(className:"Budget")
+       query.includeKeys(["user", "amount"])
+       
+        query.findObjectsInBackground { (budget, error) in
+            if budget != nil {
+                self.budgets = budget!
+//                print(self.budgets)
+                let storage = self.budgets
+                let user = storage["author"] as! PFUser
+                UserNameLabel.text! = user.amount
+                
+                
+                
+                
+                         print ("printed!")
+
+
 //                print (budget as Any)
-//                     } else {
-//                         print ("failed!")
-//                     }
-//        }
-//        
+                     } else {
+                         print ("failed!")
+                     }
+        }
+//
 //        query.includeKey("author")
 //        query.getObjectInBackground(withId: "NgRi2HaV2v") { (budget, error) in
 //            if budget != nil {
@@ -60,9 +71,9 @@ class ProfileViewController: UIViewController {
 //                print ("failed!")
 //            }
 //        }
-        
+//
 //        UserNameLabel.text! = budget["author"] as? String
-        
+//
         
     }
    
