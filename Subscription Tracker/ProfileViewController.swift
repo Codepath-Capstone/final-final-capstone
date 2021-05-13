@@ -48,8 +48,8 @@ class ProfileViewController: UIViewController {
                 self.budgets = budget!
 //                print(self.budgets)
                 let storage = self.budgets
-                let user = storage["author"] as! PFUser
-                UserNameLabel.text! = user.amount
+//                let user = storage["author"] as! PFUser
+//                UserNameLabel.text! = user.amount
                 
                 
                 
