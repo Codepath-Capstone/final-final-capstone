@@ -15,7 +15,9 @@ class AppDetailsViewController: UIViewController {
     @IBOutlet weak var appNameLabel: UILabel!
     @IBOutlet weak var appContent: UILabel!
     @IBOutlet weak var subscriptionCost: UILabel!
-    
+  
+    @IBOutlet weak var totalRatingsLabel: UILabel!
+    @IBOutlet weak var ratingsLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,10 +25,32 @@ class AppDetailsViewController: UIViewController {
         
         appNameLabel.text = app["name"] as? String
         appContent.text = app["description"] as? String
-        let posterUrl = URL(string: "https://play-lh.googleusercontent.com/6Sp9grilVISOGqi92M26BH49Tj6o_VX_gByA4u1rl8kAvqOoY9n5EzDEHcFEnGHlzg=w128")
+      
         
-        appImageView.af_setImage(withURL: posterUrl!)
-        
+        if let price = app["price"] as? [String:Any], let currency = price["display"] as? String{
+//            print(currency)
+            subscriptionCost.text = currency
+        } else {
+            print("failed to find price")
+        }
+        if let icons = app["icons"] as? [String:Any], let largeIcon512 = icons["large"] as? String{
+//            print(largeIcon512)
+//            posterUrl = largeIcon512
+            let posterUrl = URL(string: largeIcon512)
+            appImageView.af_setImage(withURL: posterUrl!)
+        } else {
+            print("failed to find icon")
+        }
+        if let ratings = app["ratings"] as? [String:Any], let avgRating = ratings["average"] as? Double, let totalRatings = ratings["total"] as? Int{
+//            print(avgRating)
+//            print(totalRatings)
+            var stringRating = String(avgRating)
+            var stringTotalRating = String(totalRatings)
+            ratingsLabel.text = stringRating
+            totalRatingsLabel.text = stringTotalRating
+        } else {
+            print("failed to find rating")
+        }
         
         // Do any additional setup after loading the view.
     }
