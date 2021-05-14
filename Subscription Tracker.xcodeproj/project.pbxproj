@@ -23,7 +23,7 @@
 		D91C894D264ACECA00514E1D /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91C894C264ACECA00514E1D /* MoviesViewController.swift */; };
 		D91C895A264AD85500514E1D /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91C8959264AD85400514E1D /* AppCell.swift */; };
 		D92C2547264AEE2600597196 /* AppDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2546264AEE2600597196 /* AppDetailsViewController.swift */; };
-		D9ED4055263C35470056ECD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9ED4053263C35470056ECD3 /* Main.storyboard */; };
+		D95DF7B7264F0F860081DC15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9ED4053263C35470056ECD3 /* Main.storyboard */; };
 		D9ED405E263C366E0056ECD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9ED405C263C366E0056ECD3 /* LaunchScreen.storyboard */; };
 		EFA193705302A64D6943386E /* Pods_Subscription_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2284C71A604D0B7A5AE2DBC /* Pods_Subscription_Tracker.framework */; };
 /* End PBXBuildFile section */
@@ -300,9 +300,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95DF7B7264F0F860081DC15 /* Main.storyboard in Resources */,
 				D9ED405E263C366E0056ECD3 /* LaunchScreen.storyboard in Resources */,
 				C036E414262708B80093034D /* Assets.xcassets in Resources */,
-				D9ED4055263C35470056ECD3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
