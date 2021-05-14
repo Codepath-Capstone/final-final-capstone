@@ -25,7 +25,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
           "x-rapidapi-key": "aae7237d85msh2d2846fbe299da2p1af038jsn5cdef4e497c6",
           "x-rapidapi-host": "app-stores.p.rapidapi.com"
         ]
-        var request = URLRequest(url: URL(string: "https://app-stores.p.rapidapi.com/search?term=netflix&store=google&language=en")! as URL,cachePolicy: .useProtocolCachePolicy,timeoutInterval: 10.0)
+        var request = URLRequest(url: URL(string: "https://app-stores.p.rapidapi.com/search?term=facebook&store=google&language=en")! as URL,cachePolicy: .useProtocolCachePolicy,timeoutInterval: 10.0)
 //        let url = URL(string: "https://app-stores.p.rapidapi.com/search?term=facebook&store=google&language=en")!
                             
         request.httpMethod = "GET"
@@ -102,7 +102,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
 
         let app = apps[indexPath.row]
         
-        print("HERE is app ", indexPath.row, ":")
+//        print("HERE is app ", indexPath.row, ":")
         
         let title = app["name"] as! String
         let description = app["description"] as! String

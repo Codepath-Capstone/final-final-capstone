@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "3012DF86-7102-4C2B-A559-C067E8B7C2E4"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "72E4DB40-9C69-489F-876F-7F551B8F3337"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Downloads/AppTrackr-master 2/Subscription Tracker/AppTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "AppTableViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "72E4DB40-9C69-489F-876F-7F551B8F3337 - 904bd870de728bfd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Subscription_Tracker.AppTableViewCell.appNameLabel.getter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "Subscription Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/austin/Downloads/AppTrackr-master%202/Subscription%20Tracker/AppTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "72E4DB40-9C69-489F-876F-7F551B8F3337 - ea78b095273157e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Subscription_Tracker.AppTableViewCell.appNameLabel.setter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "Subscription Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/austin/Downloads/AppTrackr-master%202/Subscription%20Tracker/AppTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "72E4DB40-9C69-489F-876F-7F551B8F3337 - 153528dea1476d36"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Subscription_Tracker.AppTableViewCell.appNameLabel.modify : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "Subscription Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/austin/Downloads/AppTrackr-master%202/Subscription%20Tracker/AppTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "72E4DB40-9C69-489F-876F-7F551B8F3337 - 6f66139f2b0b053b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Subscription_Tracker.AppTableViewCell.appNameLabel.modify : Swift.Optional&lt;__C.UIImageView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Subscription Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/austin/Downloads/AppTrackr-master%202/Subscription%20Tracker/AppTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "72E4DB40-9C69-489F-876F-7F551B8F3337 - 43cf2f9a61590104"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Subscription_Tracker.AppTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; Subscription_Tracker.AppTableViewCell"
+                  moduleName = "Subscription Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/austin/Downloads/AppTrackr-master%202/Subscription%20Tracker/AppTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "341">
+               </Location>
+               <Location
+                  uuid = "72E4DB40-9C69-489F-876F-7F551B8F3337 - 3b4bd941f5e2ab6d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Subscription_Tracker.AppTableViewCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Subscription_Tracker.AppTableViewCell&gt;"
+                  moduleName = "Subscription Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/austin/Downloads/AppTrackr-master%202/Subscription%20Tracker/AppTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "258">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EC8ED20C-D939-4291-942C-DDECCD576C57"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Subscription Tracker/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "LoginViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
